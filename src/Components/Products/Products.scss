@@ -1,5 +1,12 @@
 .productContain {
   padding: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  h1 {
+    color: white;
+  }
   .css-1sir9cm-MuiPaper-root {
     padding: 10px;
     height: 550px;
@@ -22,11 +29,11 @@
       padding: 10px;
       width: 40px;
     }
-    input{
-        border: 1px solid #F1D754;
+    input {
+      border: 1px solid #f1d754;
     }
-    input:active{
-        border: 1px solid #3b3208;
+    input:active {
+      border: 1px solid #3b3208;
     }
     input:not(
         [type="file" i],

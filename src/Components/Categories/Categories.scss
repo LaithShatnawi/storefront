@@ -1,5 +1,12 @@
 .catagoriesCont {
   padding: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  h1{
+    color: white;
+  }
   .css-1633um2-MuiPaper-root {
     cursor: pointer;
     padding: 10px;

@@ -29,7 +29,7 @@ const initialState = {
       description: "High-end smartphone with advanced features.",
       category: "electronics",
       image: Smartphone,
-      count: 0,
+      count: 1,
     },
     {
       name: "Laptop",
@@ -37,7 +37,7 @@ const initialState = {
       description: "Powerful laptop for work and entertainment.",
       category: "electronics",
       image: Laptop,
-      count: 0,
+      count: 1,
     },
     {
       name: "Headphones",
@@ -45,7 +45,7 @@ const initialState = {
       description: "Noise-cancelling headphones for immersive audio.",
       category: "electronics",
       image: Headphones,
-      count: 0,
+      count: 1,
     },
     {
       name: "Smart TV",
@@ -53,7 +53,7 @@ const initialState = {
       description: "4K smart TV with streaming capabilities.",
       category: "electronics",
       image: SmartTV,
-      count: 0,
+      count: 1,
     },
     {
       name: "Fitness Tracker",
@@ -61,7 +61,7 @@ const initialState = {
       description: "Tracks your fitness activities and health metrics.",
       category: "electronics",
       image: FitnessTracker,
-      count: 0,
+      count: 1,
     },
     {
       name: "Bluetooth Speaker",
@@ -69,6 +69,7 @@ const initialState = {
       description: "Portable speaker with excellent sound quality.",
       category: "electronics",
       image: BluetoothSpeaker,
+      count: 1,
     },
     {
       name: "Vacuum Cleaner",
@@ -76,7 +77,7 @@ const initialState = {
       description: "Powerful vacuum cleaner for efficient cleaning.",
       category: "household",
       image: VacuumCleaner,
-      count: 0,
+      count: 1,
     },
     {
       name: "Blender",
@@ -84,7 +85,7 @@ const initialState = {
       description: "Versatile blender for smoothies and food prep.",
       category: "household",
       image: Blender,
-      count: 0,
+      count: 1,
     },
     {
       name: "Toaster",
@@ -92,7 +93,7 @@ const initialState = {
       description: "Quick and efficient toaster for your morning routine.",
       category: "household",
       image: Toaster,
-      count: 0,
+      count: 1,
     },
     {
       name: "Coffee Maker",
@@ -100,7 +101,7 @@ const initialState = {
       description: "Automatic coffee maker for fresh brews.",
       category: "household",
       image: CoffeeMaker,
-      count: 0,
+      count: 1,
     },
     {
       name: "Iron",
@@ -108,7 +109,7 @@ const initialState = {
       description: "Steam iron for wrinkle-free clothes.",
       category: "household",
       image: Iron,
-      count: 0,
+      count: 1,
     },
     {
       name: "Dishwasher",
@@ -116,6 +117,7 @@ const initialState = {
       description: "Efficient dishwasher for sparkling clean dishes.",
       category: "household",
       image: Dishwasher,
+      count: 1,
     },
     {
       name: "Apples",
@@ -123,7 +125,7 @@ const initialState = {
       description: "Fresh, crisp apples for snacking and cooking.",
       category: "groceries",
       image: Apples,
-      count: 0,
+      count: 1,
     },
     {
       name: "Milk",
@@ -131,7 +133,7 @@ const initialState = {
       description: "Nutrient-rich milk for your daily needs.",
       category: "groceries",
       image: Milk,
-      count: 0,
+      count: 1,
     },
     {
       name: "Bread",
@@ -139,7 +141,7 @@ const initialState = {
       description: "Soft and delicious bread for sandwiches.",
       category: "groceries",
       image: Bread,
-      count: 0,
+      count: 1,
     },
     {
       name: "Eggs",
@@ -147,7 +149,7 @@ const initialState = {
       description: "Farm-fresh eggs for your breakfast.",
       category: "groceries",
       image: Eggs,
-      count: 0,
+      count: 1,
     },
     {
       name: "Cereal",
@@ -155,7 +157,7 @@ const initialState = {
       description: "Nutritious cereal for a balanced start to your day.",
       category: "groceries",
       image: Cereal,
-      count: 0,
+      count: 1,
     },
     {
       name: "Pasta",
@@ -163,6 +165,7 @@ const initialState = {
       description: "Versatile pasta for delicious meals.",
       category: "groceries",
       image: Pasta,
+      count: 1,
     },
   ],
 };
@@ -175,6 +178,16 @@ export default (state = initialState, action) => {
         (item) => payload === item.category
       );
       return { products: selectedProducts };
+    case "INCREASE":
+      // const newItem = {
+      //   name: state.order.name,
+      //   price: state.order.price,
+      //   description: state.order.description,
+      //   category: state.order.category,
+      //   image: state.order.image,
+      //   count: payload,
+      // };
+      return ;
     default:
       return state;
   }
