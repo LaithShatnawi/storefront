@@ -1,5 +1,4 @@
 /* eslint-disable react-refresh/only-export-components */
-import selectedCategory from "../../Store/ProductsState";
 import { connect } from "react-redux";
 import "./Products.scss";
 import { experimentalStyled as styled } from "@mui/material/styles";
@@ -15,19 +14,32 @@ const Products = (props) => {
     textAlign: "center",
     color: theme.palette.text.secondary,
   }));
+
+  console.log(props.myProducts.products);
+
   return (
     <div className="productContain">
       <Box sx={{ flexGrow: 1 }}>
-        <Grid
-          container
-          spacing={{ xs: 2, md: 3 }}
-          columns={{ xs: 4, sm: 8, md: 12 }}
-        >
-          {Array.from(Array(6)).map((_, index) => (
-          <Grid item xs={2} sm={4} md={4} key={index}>
-            <Item>{}</Item>
-          </Grid>
-          ))}
+        <Grid container spacing={20}>
+          {props.myProducts.products.map((item, idx) => {
+            return (
+              <Grid item xs={4} key={idx}>
+                <Item>
+                  <div className="imgContain">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <h3>{item.name}</h3>
+                  <div className="price">{item.price}$</div>
+                  <p>{item.description}</p>
+                  <div className="quantityCont">
+                    <label>Quantity</label>
+                    <input type="number" placeholder="0" />
+                  </div>
+                  <button>Add To Chart</button>
+                </Item>
+              </Grid>
+            );
+          })}
         </Grid>
       </Box>
     </div>
@@ -36,6 +48,5 @@ const Products = (props) => {
 const mapStateToProps = (state) => ({
   myProducts: state.myProductsReducer,
 });
-const mapDispatchToProps = { selectedCategory };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default connect(mapStateToProps)(Products);

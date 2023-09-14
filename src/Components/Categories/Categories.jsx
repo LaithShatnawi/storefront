@@ -18,6 +18,8 @@ const Categories = (props) => {
     color: theme.palette.text.secondary,
   }));
 
+console.log(props.myCategories)
+
   return (
     <div className="catagoriesCont">
       <Box sx={{ flexGrow: 1 }}>
