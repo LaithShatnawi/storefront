@@ -1,7 +1,9 @@
-
+import './Footer.scss'
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <div className="fotterConta">
+      <h3>2023&copy;</h3>
+    </div>
   )
 }
 

@@ -1,0 +1,33 @@
+.headerContain {
+  background-color: #F1D754;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  z-index: 1;
+  h1 {
+    color: white;
+  }
+  ul {
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: larger;
+      width: 150px;
+      height: 100px;
+      background-color: #F1D754;
+      color: white;
+      transition: 0.3s ease;
+      &:hover {
+        background-color: rgb(213, 189, 93);
+        cursor: pointer;
+      }
+    }
+  }
+}
