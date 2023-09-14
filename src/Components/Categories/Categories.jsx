@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import "./Categories.scss";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { selectedCategory } from "../../Store/actions";
+import { selectedCategory } from "../../Store/Actions";
 
 const Categories = (props) => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -22,6 +22,7 @@ console.log(props.myCategories)
 
   return (
     <div className="catagoriesCont">
+      <h1>CATEGORIES</h1>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={20}>
           {props.myCategories.category.map((item, idx) => {

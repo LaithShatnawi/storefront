@@ -5,6 +5,8 @@ import { experimentalStyled as styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import {addProduct} from "../../Store/Actions";
+import {increaseProduct} from "../../Store/Actions";
 
 const Products = (props) => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -19,6 +21,7 @@ const Products = (props) => {
 
   return (
     <div className="productContain">
+      <h1>{props.myProducts.products[0].category}</h1>
       <Box sx={{ flexGrow: 1 }}>
         <Grid container spacing={20}>
           {props.myProducts.products.map((item, idx) => {
@@ -33,9 +36,11 @@ const Products = (props) => {
                   <p>{item.description}</p>
                   <div className="quantityCont">
                     <label>Quantity</label>
-                    <input type="number" placeholder="0" />
+                    <input type="number" placeholder="1" onChange={(e)=>props.increaseProduct(e.target.value)}/>
                   </div>
-                  <button>Add To Chart</button>
+                  <button onClick={() => props.addProduct(item)}>
+                    Add To Cart
+                  </button>
                 </Item>
               </Grid>
             );
@@ -48,5 +53,5 @@ const Products = (props) => {
 const mapStateToProps = (state) => ({
   myProducts: state.myProductsReducer,
 });
-
-export default connect(mapStateToProps)(Products);
+const mapDispatchToProps = { addProduct,increaseProduct };
+export default connect(mapStateToProps, mapDispatchToProps)(Products);
