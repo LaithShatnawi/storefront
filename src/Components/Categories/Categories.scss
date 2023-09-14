@@ -1,0 +1,38 @@
+.catagoriesCont {
+  padding: 200px;
+  .css-1633um2-MuiPaper-root {
+    cursor: pointer;
+    padding: 10px;
+    height: 500px;
+    font-family: "Jost", sans-serif;
+    font-family: "Noto Serif", serif;
+    font-family: "Poppins", sans-serif;
+    box-shadow: 4px 3px 27px -4px rgba(0, 0, 0, 0.93);
+    -webkit-box-shadow: 4px 3px 27px -4px rgba(0, 0, 0, 0.93);
+    -moz-box-shadow: 4px 3px 27px -4px rgba(0, 0, 0, 0.93);
+    &:hover {
+      img {
+        transform: scale(1.5);
+        transition: 0.5s ease;
+      }
+    }
+  }
+  .link {
+    text-decoration: none;
+  }
+  .imgContain {
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    transition: 0.5s ease;
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 3px;
+      transition: 0.5s ease;
+    }
+  }
+}
